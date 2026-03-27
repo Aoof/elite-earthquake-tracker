@@ -26,7 +26,7 @@ const FALLBACK_STYLE = {
 export async function GET() {
 	try {
 		// Check if API key is available
-		if (!MAPTILER_API || MAPTILER_API === "" || MAPTILER_API.includes("Your_")) {
+		if (!MAPTILER_API || MAPTILER_API === "" || MAPTILER_API.includes("Your_") || MAPTILER_API.includes("placeholder")) {
 			console.warn("MapTiler API key not configured, using OpenStreetMap fallback");
 			return json(FALLBACK_STYLE);
 		}
