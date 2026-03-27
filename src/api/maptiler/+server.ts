@@ -1,0 +1,1 @@
+import { MAPTILER_API } from "$env/static/private";
