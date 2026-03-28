@@ -1,42 +1,27 @@
-# sv
+# Elite Earthquake Tracker
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+This project was created as part of the ELITE club at College LaSalle. It's a web application built with SvelteKit that visualizes earthquake data on an interactive map.
 
-## Creating a project
+## Major Components
 
-If you're seeing this, you've probably already done this step. Congrats!
+- **Frontend**: Built with SvelteKit, featuring a responsive map interface using MapLibre GL.
+- **Data Source**: Fetches real-time earthquake data from the USGS Earthquake API, filtering for earthquakes with magnitude 4.5+.
+- **Map Styling**: Integrates with MapTiler for high-quality map tiles, with a fallback to OpenStreetMap.
+- **UI Components**: Includes custom date pickers and sliders for filtering earthquakes by date range.
+- **API Routes**: Server-side endpoints for handling map style requests.
 
-```sh
-# create a new project
-npx sv create my-app
-```
+## Features
 
-To recreate this project with the same configuration:
+- Interactive map displaying earthquake locations with color-coded markers based on magnitude.
+- Date range filtering using calendar pickers and dual-range sliders.
+- Popup details for each earthquake showing magnitude, location, and time.
+- Responsive design with dark theme.
 
-```sh
-# recreate this project
-npx sv@0.13.0 create --template minimal --types ts --add prettier tailwindcss="plugins:none" --install npm .
-```
+## Hosting on Vercel
 
-## Developing
+1. **Connect Repository**: Sign up for Vercel and connect your GitHub repository.
+2. **Configure Environment Variables**: Add your MapTiler API key as `MAPTILER_API` in Vercel's environment variables settings.
+3. **Deploy**: Vercel will automatically detect SvelteKit and deploy the app. No additional configuration needed.
+4. **Domain**: Once deployed, you can customize the domain or use the default Vercel URL.
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```sh
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```sh
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+For more details, check the [Vercel documentation for SvelteKit](https://vercel.com/docs/frameworks/sveltekit).

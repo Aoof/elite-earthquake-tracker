@@ -40,8 +40,6 @@ export interface Earthquake {
 const API_URL = 'https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson';
 
 export const earthquakes: Writable<Earthquake[]> = writable([]);
-export const requestedStartDate: Writable<number> = writable(Date.now() - 7 * 24 * 60 * 60 * 1000);
-export const requestedEndDate: Writable<number> = writable(Date.now());
 export const isLoading: Writable<boolean> = writable(false);
 
 export async function fetchEarthquakes(startDate: number, endDate: number): Promise<void> {
