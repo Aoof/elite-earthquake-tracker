@@ -366,8 +366,11 @@
 {/if}
 
 <!-- Info panel -->
-<div class="absolute bottom-4 left-4 rounded bg-gray-900 border border-gray-800 px-3 py-2">
-	<p class="text-xs text-gray-300">Earthquakes 4.5+ • Click for details</p>
+<div class="absolute bottom-4 left-4 rounded bg-white border w-fit border-gray-300 px-3 py-2 text-center">
+	<div class="bg-white p-1 mb-2 rounded max-w-32 flex items-center justify-center m-auto">
+		<img src="/logo.PNG" alt="Logo" class="w-full h-auto" />
+	</div>
+	<p class="text-xs text-gray-800">Earthquakes 4.5+ • Click for details</p>
 </div>
 
 <style lang="postcss">
